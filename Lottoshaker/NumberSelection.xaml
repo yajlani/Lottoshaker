@@ -1,0 +1,69 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Lottoshaker.NumberSelection"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" Margin="0,1,0,-1">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="LOTTO PICKER" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="results" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,61,12,22">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".3*" />
+                <RowDefinition Height=".3*" />
+                <RowDefinition Height=".3*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="152"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="Pick_Button" Content="Enable Shake!" Grid.ColumnSpan="3" Grid.Row="0" Margin="24,15,12,30" Click="Pick_Button_Click_1" />
+
+            <Border Margin="12,24,12,0" BorderThickness="4" BorderBrush="Red" Grid.Column="0" Grid.Row="1" CornerRadius="10" Height="138" VerticalAlignment="Top">
+                <TextBlock x:Name="Pick1_Block" Text="-" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Border>
+            <Border Margin="12,24,12,0" BorderThickness="4" BorderBrush="Red" Grid.Column="1" Grid.Row="1" CornerRadius="10" Height="138" VerticalAlignment="Top">
+                <TextBlock x:Name="Pick2_Block" Text="-" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Border>
+            <Border Margin="12,24,12,0" BorderThickness="4" BorderBrush="Red" Grid.Column="2" Grid.Row="1" CornerRadius="10" Height="138" VerticalAlignment="Top">
+                <TextBlock x:Name="Pick3_Block"  Text="-" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Border>
+            <Border Margin="12,24,12,0" BorderThickness="4" BorderBrush="Red" Grid.Column="0" Grid.Row="2" CornerRadius="10" Height="138" VerticalAlignment="Top">
+                <TextBlock x:Name="Pick4_Block" Text="-" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Border>
+            <Border Margin="12,24,12,0" BorderThickness="4" BorderBrush="Red" Grid.Column="1" Grid.Row="2" CornerRadius="10" Height="138" VerticalAlignment="Top">
+                <TextBlock x:Name="Pick5_Block" Text="-" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Border>
+            <Border Margin="12,24,12,0" BorderThickness="4" BorderBrush="Red" Grid.Column="2" Grid.Row="2" CornerRadius="10" Height="138" VerticalAlignment="Top">
+                <TextBlock x:Name="Pick6_Block" Text="-" FontSize="{StaticResource PhoneFontSizeExtraExtraLarge}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+            </Border>
+        </Grid>
+
+    </Grid>
+
+</phone:PhoneApplicationPage>
